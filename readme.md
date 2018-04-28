@@ -1,6 +1,4 @@
 # Mac下安装rmagick遇到的问题
-@(Work Around)[rails, ruby, gem, rmagic, imagemagick, macos, High Sierra]
-
 
 macOS: **High Sierra 10.13.4**
 ruby version: `2.4.2`
