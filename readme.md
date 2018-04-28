@@ -150,29 +150,4 @@ $ brew install gs
 7. 尝试往图片上写中文乱码
   字体的原因，除了需要安装 **7.** 里面那个扩展，还需要下载中文字体，放在可以访问的路径，最终代码差不多这样，给背景图上加上了图片和文字：
  
-```powershell
-def composing
-  background = Image.read('test.png').first
-  avatar = Image.read('499317.jpeg').first
-
-  avatar_resized = avatar.resize_to_fit(40,40)
-  avatar_resized.border!(1, 1, 'black')
-  avatar_resized.shadow(2, 5, 3)
-
-  marketing_image = background.composite(avatar_resized, 30, 58, OverCompositeOp)
-
-  text = "孙晓迪 askldjaskljdlasd KJ"
-
-  content = Magick::Draw.new
-    content.annotate(marketing_image, 0, 0, 60, 550, text) do
-     self.font = './ZuiYouTi-2.ttf'
-     self.pointsize = 24
-     self.font_weight = Magick::BoldWeight
-     self.fill = 'black'
-     self.gravity = Magick::SouthEastGravity
-    end
-
-
-  marketing_image.write("marketing_image.png")
-end
-```
+  ![](https://ws1.sinaimg.cn/large/006tNc79gy1fqshntqoqfj30bq0j4795.jpg)
